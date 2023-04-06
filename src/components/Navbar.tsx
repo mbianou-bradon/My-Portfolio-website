@@ -27,27 +27,35 @@ export default function NavBar() {
       </div>
       <div className="socials hidden sm:flex gap-12 items-center">
         <ul className="flex justify-between gap-4 text-sm [&>*:hover]:bg-secondary/60 [&>*:hover]:text-white [&>*]:cursor-pointer">
-            <li className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="twitter">
-                <a href="" className="flx items-center gap-1">
-                <div>
-                    <BsTwitter />
-                </div>
-                </a>
-            </li>
-            <li className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="GitHub">
-                <a href="" className="flx items-center gap-1">
-                <div>
-                    <BsGithub />
-                </div>
-                </a>
-            </li>
-            <li className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="Mail">
-                <div>
-                    <MdMailOutline />
-                </div>
-            </li>
+          <li
+            className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
+            title="twitter"
+          >
+            <a href="" className="flx items-center gap-1">
+              <div>
+                <BsTwitter />
+              </div>
+            </a>
+          </li>
+          <li
+            className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
+            title="GitHub"
+          >
+            <a href="" className="flx items-center gap-1">
+              <div>
+                <BsGithub />
+              </div>
+            </a>
+          </li>
+          <li
+            className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
+            title="Mail"
+          >
+            <div>
+              <MdMailOutline />
+            </div>
+          </li>
         </ul>
-        
       </div>
 
       <div className="text-3xl md:hidden">
