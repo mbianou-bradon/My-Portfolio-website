@@ -3,8 +3,8 @@
 export default function Hero(){
 
     return (
-        <div>
-            
+        <div className="h-screen">
+            <div></div>
         </div>
     )
 }
