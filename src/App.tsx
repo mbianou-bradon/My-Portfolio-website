@@ -1,14 +1,12 @@
 import Footer from './components/Footer';
-import Hero from './components/Hero';
-import IntroSection from './components/IntroSection';
 import NavBar from './components/Navbar';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="bg-primary text-white font-mono">
       <NavBar />
-      <Hero/>
-      <IntroSection/>
+      <Home/>
       <Footer/>
     </div>
   );
