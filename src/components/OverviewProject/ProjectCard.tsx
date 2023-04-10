@@ -3,7 +3,7 @@
 export default function ProjectCard(){
 
     return (
-        <div className="h-[25rem] rounded-lg overflow-hidden hover:-rotate-3">
+        <div className="h-[25rem] rounded-lg overflow-hidden hover:-rotate-3 hover:scale-[1.04]">
             <div className="h-[75%] bg-teal-400 overflow-hidden">
                 <img src="" alt="" className="h-full w-full object-cover hover:scale-[1.03]"/>
             </div>

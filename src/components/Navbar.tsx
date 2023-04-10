@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi"
 
 export default function NavBar() {
   return (
-    <nav className="flex justify-between items-center h-[10vh] px-4 sm:px-10">
+    <nav className="flex justify-between items-center h-[10vh] px-4 sm:px-10 [&_*]:transition-colors [&_*]:ease-linear [&_*]:duration-150">
       <div className="logo font-sans text-lg">
         <span className="font-bold">Mbianou</span> Bradon
       </div>
