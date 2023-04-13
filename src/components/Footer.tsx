@@ -4,7 +4,7 @@ import { BsTwitter, BsGithub, BsFacebook, BsLinkedin } from "react-icons/bs"
 export default function Footer(){
 
     return(
-        <footer className="md:h-[50vh] [&>*]:grid [&>*]:grid-cols-1 [&>*]:sm:grid-cols-3 [&>*]:gap-y-5 py-10 sm:py-20 px-4 sm:px-20">
+        <footer className="bg-[#25262a] [&>*]:grid [&>*]:grid-cols-1 [&>*]:sm:grid-cols-3 [&>*]:gap-y-5 py-10 sm:py-20 px-4 sm:px-20">
             <div className="">
                 <div className="col-span-2 text-3xl">
                     <h2 className="w-full sm:w-4/5 mb-6">Let's make something amazing together.</h2>
