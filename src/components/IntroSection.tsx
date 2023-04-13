@@ -5,7 +5,7 @@ import { FaMobile } from "react-icons/fa"
 export default function IntroSection(){
 
     return(
-        <div className="md:h-[80vh] bg-[#25262a] py-10 sm:py-20 px-4 sm:px-20">
+        <div className="bg-[#25262a] py-10 sm:py-20 px-4 sm:px-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="">
                     <div className="bg-primary/50 hover:bg-primary hover:text-secondary p-8 hover:shadow-md rounded-lg hover:scale-[1.02] cursor-pointer">
