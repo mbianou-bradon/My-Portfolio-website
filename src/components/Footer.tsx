@@ -24,7 +24,7 @@ export default function Footer(){
                             <ul className="flex md:flex-col sm:justify-between gap-5 text-xs [&>*:hover]:text-secondary">
                                 <li><a href="">About</a></li>
                                 <li><a href="">Works</a></li>
-                                <li><a href="">Notes</a></li>
+                                <li><a href="">Blog</a></li>
                                 <li><a href="">Contact</a></li>
                             </ul>
                         </nav>

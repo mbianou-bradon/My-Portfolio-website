@@ -18,10 +18,10 @@ export default function NavBar() {
             <a href="">Works</a>
           </li>
           <li>
-            <a href="">Notes</a>
+            <a href="">Blog</a>
           </li>
           <li>
-            <a href="">Contacts</a>
+            <a href="">Contact</a>
           </li>
         </ul>
       </div>

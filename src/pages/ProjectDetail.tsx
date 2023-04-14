@@ -62,7 +62,7 @@ export default function ProjectDetails(){
                     <h2 className="text-3xl my-4">More Images</h2>
 
                     <div className="flex flex-wrap w-full [&>*]:w-full [&>*]:sm:w-[20rem] [&>*]:h-full [&>*]:sm:h-[15rem] [&>*]:bg-rose-500 [&>*]:m-4">
-                        <div></div>
+                        <div className="cursor-zoom-in"></div>
                         <div></div>
                         <div></div>
                         {/* <div></div> */}
