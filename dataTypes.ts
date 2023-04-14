@@ -6,4 +6,5 @@ export interface Project {
         liveLink: string;
         github: string; 
     };
+    techStacks: string[];
 }
