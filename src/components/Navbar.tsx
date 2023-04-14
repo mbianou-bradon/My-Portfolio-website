@@ -12,7 +12,10 @@ export default function NavBar() {
       <div className="menu hidden md:block">
         <ul className="flex justify-between items-center gap-10 [&>*:hover]:text-secondary">
           <li>
-            <a href="">About</a>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">AboutMe</a>
           </li>
           <li>
             <a href="">Works</a>
