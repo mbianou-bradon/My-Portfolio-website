@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 
+.stackIcon {
+    @apply w-20 h-20 rounded-full bg-tertiary/30 flex items-center justify-center;
+}
+.stackIconContainer{
+    @apply flex items-center justify-center flex-col
+}
+
+.inputStyle {
+    @apply border border-tertiary focus:ring-secondary focus:border-secondary focus:ring-offset-secondary h-10 w-full  
+    text-sm text-primary rounded my-2 pl-4 bg-transparent
+}

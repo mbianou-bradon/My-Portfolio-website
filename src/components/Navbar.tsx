@@ -85,7 +85,7 @@ export default function NavBar() {
             className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
             title="Mail"
           >
-            <a href="mailto:mbianoubradon@gmail.com?subject=Hello">
+            <a href={`mailto:mbianoubradon2000@gmail.com`} target="_blank" rel="noreferrer">
               <div>
                 <MdMailOutline />
               </div>

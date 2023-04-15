@@ -32,22 +32,127 @@ export default function ProjectDetails(){
                             {/* Tech Stack */}
                             <div className="flex gap-5 flex-wrap">
 
-                                { react && <img src={react} title="React" alt="React" width="60" height="60"/>}&nbsp;
-                                { nextjs && <img src={nextjs} title="NextJS" alt="NextJS" width="60" height="60"/>}&nbsp;
-                                {redux && <img src={redux} title="Redux" alt="Redux " width="60" height="60"/>}&nbsp;
-                                { html && <img src={html} title="HTML5" alt="HTML" width="60" height="60"/>}&nbsp;
-                                { css && <img src={css}  title="CSS3" alt="CSS" width="60" height="60"/>}&nbsp;
-                                { tailwindcss && <img src={tailwindcss} title="Tailwindcss" alt="Tailwindcss" width="80" height="80"/>}&nbsp;
-                                { bootstrap && <img src={bootstrap} title="Bootstrap" alt="Bootstrap" width="60" height="60"/>}&nbsp;
-                                { materialui && <img src={materialui} title="Material UI" alt="Material UI" width="60" height="60"/>}&nbsp; 
-                                { javascript && <img src={javascript} title="JavaScript" alt="JavaScript" width="60" height="60"/>}&nbsp;
-                                { typescript && <img src={typescript} title="TypeScript" alt="TypeScript" width="60" height="60"/>}&nbsp;
+                                { react && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={react} title="React" alt="React" width="50" height="50"/>
+                                    </div>
+                                    <h2>React</h2>
+                                </div>
+                                }&nbsp;
+                                { nextjs && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={nextjs} title="NextJS" alt="NextJS" width="50" height="50"/>
+                                    </div>
+                                    <h2>NextJS</h2>
+                                </div>
+                                }&nbsp;
+                                {redux && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={redux} title="Redux" alt="Redux " width="50" height="50"/>
+                                    </div>
+                                    <h2>Redux</h2>
+                                </div>
+                                }&nbsp;
+                                { html && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={html} title="HTML5" alt="HTML" width="50" height="50"/>
+                                    </div>
+                                    <h2>HTML5</h2>
+                                </div>
+                                }&nbsp;
+                                { css && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={css}  title="CSS3" alt="CSS" width="50" height="50"/>
+                                    </div>
+                                    <h2>CSS3</h2>
+                                </div>
+                                }&nbsp;
+                                { tailwindcss && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={tailwindcss} title="Tailwindcss" alt="Tailwindcss" width="50" height="50"/>
+                                    </div>
+                                    <h2>TailwindCSS</h2>
+                                </div>
+                                }&nbsp;
+                                { bootstrap && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={bootstrap} title="Bootstrap" alt="Bootstrap" width="50" height="50"/>
+                                    </div>
+                                    <h2>Bootstrap</h2>
+                                </div>
+                                }&nbsp;
+                                { materialui && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={materialui} title="Material UI" alt="Material UI" width="50" height="50"/>
+                                    </div>
+                                    <h2>MaterialUI</h2>
+                                </div>
+                                }&nbsp; 
+                                { javascript && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={javascript} title="JavaScript" alt="JavaScript" width="40" height="40"/>
+                                    </div>
+                                    <h2>JavaScript</h2>
+                                </div>
+                                }&nbsp;
+                                { typescript && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={typescript} title="TypeScript" alt="TypeScript" width="40" height="40"/>
+                                    </div>
+                                    <h2>TypeScript</h2>
+                                </div>
+                            }&nbsp;
 
-                                { nodejs && <img src={nodejs} title="NodeJS" alt="NodeJS" width="60" height="60"/>}&nbsp;
-                                { express && <img src={express} title="Express" alt="Express" width="60" height="60"/>}&nbsp;
-                                { flutter && <img src={flutter} title="Flutter" alt="Flutter" width="60" height="60"/>}&nbsp;
-                                { firebase && <img src={firebase} title="Firebase" alt="Firebase" width="60" height="60"/>}&nbsp;
-                                { mongodb && <img src={mongodb} title="MongoDB" alt="MongoDB" width="60" height="60"/>}&nbsp;
+                                { nodejs && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={nodejs} title="NodeJS" alt="NodeJS" width="50" height="50"/>
+                                    </div>
+                                    <h2>NodeJS</h2>
+                                </div>
+                            }&nbsp;
+                                { express && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={express} title="Express" alt="Express" width="50" height="50"/>
+                                    </div>
+                                    <h2>ExpressJS</h2>
+                                </div>
+                            }&nbsp;
+                                { flutter && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={flutter} title="Flutter" alt="Flutter" width="50" height="50"/>
+                                    </div>
+                                    <h2>Flutter</h2>
+                                </div>
+                            }&nbsp;
+                                { firebase && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={firebase} title="Firebase" alt="Firebase" width="50" height="50"/>
+                                    </div>
+                                    <h2>Firebase</h2>
+                                </div>
+                            }&nbsp;
+                            { mongodb && 
+                                <div className="stackIconContainer">
+                                    <div className="stackIcon">
+                                        <img src={mongodb} title="MongoDB" alt="MongoDB" width="50" height="50"/>
+                                    </div>
+                                    <h2>MongoDB</h2>
+                                </div>
+                            }&nbsp;
                                 
                             </div>
                         </div>

@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import IntroSection from "../components/IntroSection";
 import OverviewBlog from "../components/OverviewBlog/OverviewBlog";
 import OverviewProject from "../components/OverviewProject/OverviewProject";
-import letsConnect from "../components/letsConnect";
+import LetsConnects from "../components/LetsConnects";
 
 
 export default function Home(){
@@ -13,7 +13,7 @@ export default function Home(){
             <IntroSection />
             <OverviewProject />
             <OverviewBlog />
-            <letsConnect/>
+            <LetsConnects />
         </div>
     )
 }

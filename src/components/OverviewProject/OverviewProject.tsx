@@ -22,7 +22,7 @@ export default function OverviewProject(){
                     <div className="text-secondary underline cursor-pointer font-semibold text-xl mb-2 hover:no-underline w-fit mx-auto">
                         <h2>ALL PROJECTS</h2>
                     </div>
-                    <p className="text-[0.5rem] text-tertiary w-[50%] mx-auto">* Some projects not allow publish by NDA, if you want to see more, <span><a href="#">contact</a></span></p>
+                    <p className="text-[0.5rem] text-tertiary w-[50%] mx-auto">*Some projects not allow publish by NDA, if you want to see more, <span><a href="#">contact</a></span></p>
                 </div>
             </div>
         </div>
