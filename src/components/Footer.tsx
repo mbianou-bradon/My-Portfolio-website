@@ -1,5 +1,5 @@
 import React from "react"
-import { BsTwitter, BsGithub, BsFacebook, BsLinkedin } from "react-icons/bs"
+import { BsTwitter, BsGithub, BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs"
 import { AiOutlineCodepen } from "react-icons/ai"
 import { NavLink } from "react-router-dom"
 
@@ -83,35 +83,42 @@ export default function Footer(){
 
                 <div className="text-xs flex gap-3 [&>*:hover]:bg-secondary/60 [&>*:hover]:text-white [&>*]:cursor-pointer">
                     <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="twitter">
-                        <a href="" className="flx items-center gap-1">
+                        <a href="https://twitter.com/Mbianou_Bradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
                         <div>
                             <BsTwitter />
                         </div>
                         </a>
                     </div>
                     <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="GitHub">
-                        <a href="" className="flx items-center gap-1">
+                        <a href="http://github.com/mbianou-bradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
                         <div>
                             <BsGithub />
                         </div>
                         </a>
                     </div>
                     <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="LinkedIn">
-                        <a href="" className="flx items-center gap-1">
+                        <a href="https://www.linkedin.com/in/mbianou-bradon/" className="flx items-center gap-1" target="_blank" rel="noreferrer">
                         <div>
                             <BsLinkedin />
                         </div>
                         </a>
                     </div>
                     <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="Facebook">
-                        <a href="" className="flx items-center gap-1">
+                        <a href="https://www.facebook.com/romeo.mbianou" className="flx items-center gap-1" target="_blank" rel="noreferrer">
                         <div>
                             <BsFacebook />
                         </div>
                         </a>
                     </div>
+                    <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="Youtube">
+                        <a href="https://www.youtube.com/@Howbradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
+                        <div>
+                            <BsYoutube />
+                        </div>
+                        </a>
+                    </div>
                     <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="Codepen">
-                        <a href="" className="flx items-center gap-1">
+                        <a href="https://codepen.io/mbianou-bradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
                         <div>
                             <AiOutlineCodepen />
                         </div>

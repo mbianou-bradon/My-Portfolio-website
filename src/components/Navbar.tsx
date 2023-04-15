@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className="menu hidden md:block">
         <ul className="flex justify-between items-center gap-10 [&>*:hover]:text-secondary">
           <li>
-            <NavLink to="/">
+            <NavLink to="/" preventScrollReset={true}>
                 {
                   ({isActive}) => (
                     isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Home <span className="text-xs">/&gt;</span></div>  : <span className="">Home</span>
@@ -22,7 +22,7 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/aboutme">
+            <NavLink to="/aboutme" preventScrollReset={true}>
                 {
                   ({isActive}) => (
                     isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> AboutMe <span className="text-xs">/&gt;</span></div>  : <span className="">AboutMe</span>
@@ -31,7 +31,7 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/projects">
+            <NavLink to="/projects" preventScrollReset={true}>
                 {
                   ({isActive}) => (
                     isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Works <span className="text-xs">/&gt;</span></div> : <span className="">Works</span>
@@ -40,7 +40,7 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blogs">
+            <NavLink to="/blogs" preventScrollReset={true}>
                 {
                   ({isActive}) => (
                     isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Blogs <span className="text-xs">/&gt;</span></div>  : <span className="">Blog</span>
@@ -49,7 +49,7 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">
+            <NavLink to="/contact" preventScrollReset={true}>
                 {
                   ({isActive}) => (
                     isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Contact <span className="text-xs">/&gt;</span></div>  : <span className="">Contact</span>
@@ -65,7 +65,7 @@ export default function NavBar() {
             className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
             title="twitter"
           >
-            <a href="" className="flx items-center gap-1">
+            <a href="https://twitter.com/Mbianou_Bradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
               <div>
                 <BsTwitter />
               </div>
@@ -75,7 +75,7 @@ export default function NavBar() {
             className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
             title="GitHub"
           >
-            <a href="" className="flx items-center gap-1">
+            <a href="http://github.com/mbianou-bradon" className="flx items-center gap-1" target="_blank" rel="noreferrer">
               <div>
                 <BsGithub />
               </div>
@@ -85,9 +85,11 @@ export default function NavBar() {
             className="w-10 h-10 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary "
             title="Mail"
           >
-            <div>
-              <MdMailOutline />
-            </div>
+            <a href="mailto:mbianoubradon@gmail.com?subject=Hello">
+              <div>
+                <MdMailOutline />
+              </div>
+            </a>
           </li>
         </ul>
       </div>
