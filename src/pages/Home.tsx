@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import IntroSection from "../components/IntroSection";
+import OverviewBlog from "../components/OverviewBlog/OverviewBlog";
 import OverviewProject from "../components/OverviewProject/OverviewProject";
+import letsConnect from "../components/letsConnect";
 
 
 export default function Home(){
@@ -9,7 +11,9 @@ export default function Home(){
         <div>
             <Hero/>
             <IntroSection />
-            <OverviewProject/>
+            <OverviewProject />
+            <OverviewBlog />
+            <letsConnect/>
         </div>
     )
 }
