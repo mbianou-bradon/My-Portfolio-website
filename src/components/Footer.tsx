@@ -1,5 +1,7 @@
 import React from "react"
 import { BsTwitter, BsGithub, BsFacebook, BsLinkedin } from "react-icons/bs"
+import { AiOutlineCodepen } from "react-icons/ai"
+import { NavLink } from "react-router-dom"
 
 export default function Footer(){
 
@@ -22,11 +24,51 @@ export default function Footer(){
                     <div className="my-6">
                         <nav>
                             <ul className="flex md:flex-col sm:justify-between gap-5 text-xs [&>*:hover]:text-secondary">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">AboutMe</a></li>
-                                <li><a href="">Works</a></li>
-                                <li><a href="">Blog</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li>
+                                    <NavLink to="/">
+                                        {
+                                        ({isActive}) => (
+                                            isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Home <span className="text-xs">/&gt;</span></div>  : <span className="">Home</span>
+                                        )
+                                        }
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/aboutme">
+                                        {
+                                        ({isActive}) => (
+                                            isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> AboutMe <span className="text-xs">/&gt;</span></div>  : <span className="">AboutMe</span>
+                                        )
+                                        }
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/projects">
+                                        {
+                                        ({isActive}) => (
+                                            isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Works <span className="text-xs">/&gt;</span></div> : <span className="">Works</span>
+                                        )
+                                        }
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/blogs">
+                                        {
+                                        ({isActive}) => (
+                                            isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Blogs <span className="text-xs">/&gt;</span></div>  : <span className="">Blog</span>
+                                        )
+                                        }
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/contact">
+                                        {
+                                        ({isActive}) => (
+                                            isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Contact <span className="text-xs">/&gt;</span></div>  : <span className="">Contact</span>
+                                        )
+                                        }
+                                    </NavLink>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -65,6 +107,13 @@ export default function Footer(){
                         <a href="" className="flx items-center gap-1">
                         <div>
                             <BsFacebook />
+                        </div>
+                        </a>
+                    </div>
+                    <div className="w-7 h-7 text-secondary rounded-full flex items-center justify-center shadow-inner shadow-secondary " title="Codepen">
+                        <a href="" className="flx items-center gap-1">
+                        <div>
+                            <AiOutlineCodepen />
                         </div>
                         </a>
                     </div>

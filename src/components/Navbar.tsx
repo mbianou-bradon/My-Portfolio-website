@@ -2,6 +2,7 @@ import React from "react";
 import { BsTwitter, BsGithub } from "react-icons/bs";
 import { MdMailOutline} from "react-icons/md";
 import { FiMenu } from "react-icons/fi"
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -12,19 +13,49 @@ export default function NavBar() {
       <div className="menu hidden md:block">
         <ul className="flex justify-between items-center gap-10 [&>*:hover]:text-secondary">
           <li>
-            <a href="">Home</a>
+            <NavLink to="/">
+                {
+                  ({isActive}) => (
+                    isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Home <span className="text-xs">/&gt;</span></div>  : <span className="">Home</span>
+                  )
+                }
+            </NavLink>
           </li>
           <li>
-            <a href="">AboutMe</a>
+            <NavLink to="/aboutme">
+                {
+                  ({isActive}) => (
+                    isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> AboutMe <span className="text-xs">/&gt;</span></div>  : <span className="">AboutMe</span>
+                  )
+                }
+            </NavLink>
           </li>
           <li>
-            <a href="">Works</a>
+            <NavLink to="/projects">
+                {
+                  ({isActive}) => (
+                    isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Works <span className="text-xs">/&gt;</span></div> : <span className="">Works</span>
+                  )
+                }
+            </NavLink>
           </li>
           <li>
-            <a href="">Blog</a>
+            <NavLink to="/blogs">
+                {
+                  ({isActive}) => (
+                    isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Blogs <span className="text-xs">/&gt;</span></div>  : <span className="">Blog</span>
+                  )
+                }
+            </NavLink>
           </li>
           <li>
-            <a href="">Contact</a>
+            <NavLink to="/contact">
+                {
+                  ({isActive}) => (
+                    isActive? <div className="text-secondary tracking-tighter"><span className="text-xs">&lt;</span> Contact <span className="text-xs">/&gt;</span></div>  : <span className="">Contact</span>
+                  )
+                }
+            </NavLink>
           </li>
         </ul>
       </div>
