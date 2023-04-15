@@ -6,7 +6,7 @@ import { html, css, javascript, typescript, react, redux, tailwindcss, firebase,
 export default function ProjectDetails(){
 
     return(
-        <div className="h-sc px-4 sm:px-20 py-10">
+        <div className="px-4 sm:px-20 py-10">
             <div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
