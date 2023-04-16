@@ -1,5 +1,6 @@
 import React from "react"
-import bradon_hero from "../assets/images/bradon_hero.png"
+import HeroImage from "./HeroImage"
+
 
 export default function Hero(){
 
@@ -20,7 +21,7 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className="hidden w-full h-full md:flex items-end">
-                    <img src={bradon_hero} alt="Bradon Profile" title="Bradon Profile" className="h-[80%] w-[80%] aspect-square object-center"/>
+                    <HeroImage/>
                 </div>
             </div>
         </div>
