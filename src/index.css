@@ -14,3 +14,7 @@
     @apply border-2 border-tertiary focus:border-secondary h-10 w-full  
     text-sm text-tertiary rounded my-2 pl-4 bg-transparent focus:outline-none
 }
+
+.HeroIcon {
+    @apply w-24 h-24 rounded-full bg-[#25262a] flex items-center justify-center;
+}

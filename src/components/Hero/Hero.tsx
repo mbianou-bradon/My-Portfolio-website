@@ -6,7 +6,7 @@ export default function Hero(){
 
     return (
         <div className="sm:h-[80vh] mb-[6.25rem] sm:mb-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-y-5">
                 <div className="h-[85%] sm:h-[70%] w-[90%] sm:w-[80%] my-auto mx-auto">
                     <div className="p-2 rounded bg-secondary text-slate-900 text-xs w-fit"><h2>Full Stack Developer</h2></div>
                     <div className="mt-7 mb-[4.5rem]">
@@ -20,7 +20,7 @@ export default function Hero(){
                         <a href="#">Let's Chat!</a>
                     </div>
                 </div>
-                <div className="hidden w-full h-full md:flex items-end">
+                <div className="w-full h-full col-start-1 row-start-1 md:col-start-2 flex items-center justify-center">
                     <HeroImage/>
                 </div>
             </div>
