@@ -7,4 +7,11 @@ export interface Project {
         github: string; 
     };
     techStacks: string[];
+    categories: string[];
+}
+
+export interface Blog {
+    title: string;
+    coverImage: string;
+    content: string;
 }

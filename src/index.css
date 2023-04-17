@@ -16,5 +16,5 @@
 }
 
 .HeroIcon {
-    @apply w-24 h-24 rounded-full bg-[#25262a] flex items-center justify-center;
+    @apply w-20 md:w-24 h-20 md:h-24 rounded-full bg-[#25262a] flex items-center justify-center;
 }
