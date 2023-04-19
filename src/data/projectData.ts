@@ -109,6 +109,17 @@ export const ProjectData = [
         },
         category: ["BACKEND"]
 
+    },
+    {
+        title: "Farmino",
+        desc: "An efarm platform where farmers can list and showcase their items, buyers can see, buy and read more about the items and go forward to purchase the product. Farmers can upload products, edit, delete and even modify the items uploaded",
+        images: [],
+        techStacks: ["HTML", "TAILWINDCSS", "JAVASCRIPT"],
+        socialLinks: {
+            liveLink: "https://farmino.netlify.app/",
+            GitHub: "https://github.com/mbianou-bradon/iknite-Ex4"
+        },
+        category: ["FRONTEND"]
     }
 
     
