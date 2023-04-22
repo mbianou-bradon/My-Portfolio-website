@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectType {
     title: string;
     desc: string;
     images: string[];
@@ -10,7 +10,7 @@ export interface Project {
     categories: string[];
 }
 
-export interface Blog {
+export interface BlogType {
     title: string;
     coverImage: string;
     content: string;
