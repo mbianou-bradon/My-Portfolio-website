@@ -1,9 +1,30 @@
 import React from 'react'
-import {IoMdAdd} from "react-icons/io"
+import instance from '../api/axios'
+import { ProjectType } from '../../dataTypes'
+import ProjectCard from '../components/OverviewProject/ProjectCard'
 
 
 
 export default function Projects() {
+
+  const [projects, setProjects] = React.useState<ProjectType[]>([])
+
+  React.useEffect(
+    ()=>{
+      instance.get("/projects")
+      .then((project) => {
+        const temp: ProjectType[] = project.data.data
+        setProjects(temp)
+        // console.log(project.data.data)
+      })
+      .catch((err)=> console.log(err))
+    },[]
+  )
+
+    console.log(projects)
+
+
+
   return (
     <div className="px-4 sm:px-8 min-h-screen">
       <header>
@@ -20,14 +41,15 @@ export default function Projects() {
               </select>
             </div>
 
-            {/* <div className="w-fit px-6 py-2 bg-primary text-white rounded-lg hover:bg-white hover:text-primary border border-primary cursor-pointer active:scale-95 select-none">
-              <h2 className="flex items-center gap-1">Add Project <div><IoMdAdd/></div></h2>
-            </div> */}
         </div>
       </header>
 
-      <div className="flex flex-wrap min-h-min gap-5 my-6">
-    
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-h-min gap-5 my-6">
+          {
+            projects.map((project, index)=> {
+              return <ProjectCard key={index} project ={project} />;
+            })
+          }
       </div>
 
     </div>

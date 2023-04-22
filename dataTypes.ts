@@ -4,7 +4,7 @@ export interface ProjectType {
     images: string[];
     socialMedia: {
         liveLink: string;
-        github: string; 
+        GitHub: string; 
     };
     techStacks: string[];
     categories: string[];
