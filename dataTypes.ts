@@ -1,4 +1,5 @@
 export interface ProjectType {
+    _id : string;
     title: string;
     desc: string;
     images: string[];
@@ -7,7 +8,7 @@ export interface ProjectType {
         GitHub: string; 
     };
     techStacks: string[];
-    categories: string[];
+    category: string[];
 }
 
 export interface BlogType {

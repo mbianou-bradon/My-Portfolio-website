@@ -9,24 +9,24 @@ export default function OverviewProject(){
   const [projects, setProjects] = React.useState<ProjectType[]>([])
   const miniProjects : ProjectType[] = []
 
-//   React.useEffect(()=> getProject(),[])
+  React.useEffect(()=> getProject(),[])
 
-    // const getProject = ()=>{
-    //     instance.get("/projects")
-    //     .then((project) => {
-    //         setProjects(project.data.data)
-    //     })
-    //     .catch((err)=> console.log(err))
+    const getProject = ()=>{
+        instance.get("/projects")
+        .then((project) => {
+            setProjects(project.data.data)
+        })
+        .catch((err)=> console.log(err))
     
-    // }
+    }
 
-    // console.log("All Projects:",projects);
-    // miniProjects[0] = projects[0];
-    // miniProjects[1] = projects[1];
-    // miniProjects[2] = projects[2];
-    // miniProjects[3] = projects[3];
-    // miniProjects[4] = projects[4];
-    // miniProjects[5] = projects[5];
+    console.log("All Projects:",projects);
+    miniProjects[0] = projects[0];
+    miniProjects[1] = projects[1];
+    miniProjects[2] = projects[2];
+    miniProjects[3] = projects[3];
+    miniProjects[4] = projects[4];
+    miniProjects[5] = projects[5];
 
     return (
         <div className="py-10 sm:py-20 px-4 sm:px-20">
@@ -36,12 +36,12 @@ export default function OverviewProject(){
                     <p className="text-xs text-tertiary">Perfect Solutions For digital experience</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {/* {
+                    {
                         miniProjects.map(miniProject => {
                             return (<ProjectCard key={miniProject._id} project={miniProject}/>)
                         })
         
-                    }                     */}
+                    }                    
 
                 </div>
                 <div className="mt-10 text-center">

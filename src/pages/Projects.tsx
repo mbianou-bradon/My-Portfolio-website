@@ -13,13 +13,11 @@ export default function Projects() {
     ()=>{
       instance.get("/projects")
       .then((project) => {
-        const temp: ProjectType[] = project.data.data
+        const temp = project.data.data
         setProjects(temp)
-        // console.log(project.data.data)
       })
       .catch((err)=> console.log(err))
-    },[]
-  )
+    },[])
 
     console.log(projects)
 
@@ -47,7 +45,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-h-min gap-5 my-6">
           {
             projects.map((project, index)=> {
-              return <ProjectCard key={index} project ={project} />;
+              return <ProjectCard key={index} project={project} />;
             })
           }
       </div>
