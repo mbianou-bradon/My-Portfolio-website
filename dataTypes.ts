@@ -3,7 +3,7 @@ export interface ProjectType {
     title: string;
     desc: string;
     images: string[];
-    socialMedia: {
+    socialLinks: {
         liveLink: string;
         GitHub: string; 
     };

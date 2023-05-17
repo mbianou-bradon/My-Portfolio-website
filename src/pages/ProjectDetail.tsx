@@ -1,30 +1,55 @@
 import { BsGithub } from "react-icons/bs";
 import { MdOnlinePrediction } from "react-icons/md"
 import { html, css, javascript, typescript, react, redux, tailwindcss, firebase, flutter, materialui, bootstrap, nodejs, mongodb, express, nextjs } from "../assets/icons/iconsfile"
+import React from "react";
+import { ProjectType } from "../../dataTypes";
+import instance from "../api/axios";
+import { useParams } from "react-router";
 
 
 export default function ProjectDetails(){
+    const [projectDetail, setProjectDetail] = React.useState<ProjectType>()
+
+    const { projectId } = useParams();
+
+    console.log(projectId);
+
+    React.useEffect(() => {
+        instance.get(`projects/${projectId}`)
+        .then((response)=>{
+            const data = response.data.data
+            console.log(data)
+            setProjectDetail(data);
+        })
+        .catch((err)=>{
+            console.log("ProjectDetails Error:", err.message)
+        })
+    },[])
+
+
 
     return(
         <div className="px-4 sm:px-20 py-10">
             <div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                        <h2 className="text-5xl mb-5">Project Heading</h2>
+                        <h2 className="text-2xl sm:text-5xl mb-5">{projectDetail?.title}</h2>
                         <p className="text-sm mb-10 leading-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit similique minima eveniet sunt reprehenderit voluptates dolorum eaque perferendis quo? Qui provident accusamus facilis hic quam eius maxime officia nesciunt quis?
+                            {projectDetail?.desc}
                         </p>
 
                         <div className="flex justify-between mb-20 flex-wrap gap-y-5 [&>*]:flex [&>*]:gap-2 [&>*]:items-center [&>*]:justify-center [&>*]:border [&>*]:shadow-inner [&>*]:shadow-secondary [&>*]:py-3 [&>*]:rounded-md [&>*]:w-full [&>*]:sm:w-[40%] [&>*]:cursor-pointer [&>*:active]:scale-95">
-                            <div className="text-secondary">
-                                <h2>GitHub</h2>
-                                <BsGithub />
-                            </div>
+                            { projectDetail?.socialLinks.GitHub &&
+                                <a href={projectDetail?.socialLinks.GitHub} target="_blank" rel="noreferrer" className="text-secondary">
+                                    <h2>GitHub</h2>
+                                    <BsGithub />
+                                </a>
+                            }
 
-                            <div className="bg-secondary/80 border-secondary font-semibold hover:bg-transparent hover:text-secondary/80">
+                            <a href={projectDetail?.socialLinks.liveLink} target="_blank" rel="noreferrer" className="bg-secondary/80 border-secondary font-semibold hover:bg-transparent hover:text-secondary/80">
                                 <h2>Live Demo</h2>
                                 <MdOnlinePrediction className="text-xl"/>
-                            </div>
+                            </a>
                         </div>
 
                         <div>

@@ -22,7 +22,7 @@ export default function ProjectCard( props: { project: ProjectType}){
                             })
                         }
                     </p>
-                    <p>{props.project.title}</p>
+                    <p className="text-secondary">{props.project.title}</p>
                 </div>
             </div>
         </Link>
