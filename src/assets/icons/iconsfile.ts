@@ -17,18 +17,18 @@ import nextOriginal from "./nextjs-original.svg"
 
 
 
-export const html = html5;
-export const css = css3;
-export const javascript = javascriptOriginal;
-export const typescript = typescriptOriginal;
-export const react = reactOriginal;
-export const redux = reduxOriginal;
-export const firebase = firebaseOriginal;
-export const tailwindcss = tailwindcssOriginal;
-export const flutter = flutterOriginal;
-export const materialui = materialuiOriginal;
-export const bootstrap = bootstrapOriginal;
-export const nodejs = nodejsOriginal;
-export const mongodb = mongodbOriginal
-export const express = expressOriginal
-export const nextjs = nextOriginal
+export const HTML5 = html5;
+export const CSS = css3;
+export const JAVASCRIPT = javascriptOriginal;
+export const TYPESCRIPT = typescriptOriginal;
+export const REACT = reactOriginal;
+export const REDUX = reduxOriginal;
+export const FIREBASE = firebaseOriginal;
+export const TAILWINDCSS = tailwindcssOriginal;
+export const FLUTTER = flutterOriginal;
+export const MATERIALUI = materialuiOriginal;
+export const BOOTSTRAP = bootstrapOriginal;
+export const NODEJS = nodejsOriginal;
+export const MONGODB = mongodbOriginal
+export const EXPRESS = expressOriginal
+export const NEXTJS = nextOriginal

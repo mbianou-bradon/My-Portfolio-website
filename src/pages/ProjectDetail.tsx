@@ -1,6 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { MdOnlinePrediction } from "react-icons/md"
-import { html, css, javascript, typescript, react, redux, tailwindcss, firebase, flutter, materialui, bootstrap, nodejs, mongodb, express, nextjs } from "../assets/icons/iconsfile"
+import { HTML5, CSS, JAVASCRIPT, TYPESCRIPT, REACT, REDUX, TAILWINDCSS, FIREBASE, FLUTTER, MATERIALUI, BOOTSTRAP, NODEJS, MONGODB, EXPRESS, NEXTJS } from "../assets/icons/iconsfile"
 import React from "react";
 import { ProjectType } from "../../dataTypes";
 import instance from "../api/axios";
@@ -12,7 +12,7 @@ export default function ProjectDetails(){
 
     const { projectId } = useParams();
 
-    console.log(projectId);
+    console.log(projectDetail?.techStacks);
 
     React.useEffect(() => {
         instance.get(`projects/${projectId}`)
@@ -56,148 +56,219 @@ export default function ProjectDetails(){
                             <h2 className="text-3xl mb-4">Tech Stack</h2>
                             {/* Tech Stack */}
                             <div className="flex gap-5 flex-wrap">
+                                {
+                                    projectDetail?.techStacks.map((tech)=>{
+                                        
+                                    if(tech === "REACT"){
+                                        return (
+                                            <>
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={REACT} title="React" alt="React" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>React</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="NEXTJS"){
+                                        return(
+                                            <>
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={NEXTJS} title="NextJS" alt="NextJS" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>NextJS</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="REDUX"){
+                                        return(
+                                            <>
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={REDUX} title="Redux" alt="Redux " width="50" height="50"/>
+                                                    </div>
+                                                    <h2>Redux</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech === "HTML5" || tech==="HTML"){
+                                        return(
+                                        <>
+                                            <div className="stackIconContainer">
+                                                <div className="stackIcon">
+                                                    <img src={HTML5} title="HTML5" alt="HTML" width="50" height="50"/>
+                                                </div>
+                                                <h2>HTML5</h2>
+                                            </div>&nbsp;
+                                        </>
+                                        )
+                                    }
+                                    if(tech === "CSS"){ 
+                                        return(
+                                        <>
+                                            <div className="stackIconContainer">
+                                                <div className="stackIcon">
+                                                    <img src={CSS}  title="CSS3" alt="CSS" width="50" height="50"/>
+                                                </div>
+                                                <h2>CSS3</h2>
+                                            </div>&nbsp;
+                                        </>
+                                        )
+                                    }
+                                    if(tech ==="TAILWINDCSS"){  
+                                        return(
+                                        <>
+                                            <div className="stackIconContainer">
+                                                <div className="stackIcon">
+                                                    <img src={TAILWINDCSS} title="Tailwindcss" alt="Tailwindcss" width="50" height="50"/>
+                                                </div>
+                                                <h2>TailwindCSS</h2>
+                                            </div>&nbsp;
+                                        </>
+                                        )
+                                    }
+                                    if(tech === "BOOTSTRAP"){ 
+                                        return(
+                                            <>
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={BOOTSTRAP} title="Bootstrap" alt="Bootstrap" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>Bootstrap</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech ==="MATERIALUI"){
+                                        return(
+                                            <>  
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={MATERIALUI} title="Material UI" alt="Material UI" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>MaterialUI</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    } 
+                                    if(tech==="JAVASCRIPT"){
+                                        return(
+                                            <>  
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={JAVASCRIPT} title="JavaScript" alt="JavaScript" width="40" height="40"/>
+                                                    </div>
+                                                    <h2>JavaScript</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech === "TYPESCRIPT"){
+                                        return(
+                                            <>  
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={TYPESCRIPT} title="TypeScript" alt="TypeScript" width="40" height="40"/>
+                                                    </div>
+                                                    <h2>TypeScript</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
 
-                                { react && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={react} title="React" alt="React" width="50" height="50"/>
-                                    </div>
-                                    <h2>React</h2>
-                                </div>
-                                }&nbsp;
-                                { nextjs && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={nextjs} title="NextJS" alt="NextJS" width="50" height="50"/>
-                                    </div>
-                                    <h2>NextJS</h2>
-                                </div>
-                                }&nbsp;
-                                {redux && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={redux} title="Redux" alt="Redux " width="50" height="50"/>
-                                    </div>
-                                    <h2>Redux</h2>
-                                </div>
-                                }&nbsp;
-                                { html && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={html} title="HTML5" alt="HTML" width="50" height="50"/>
-                                    </div>
-                                    <h2>HTML5</h2>
-                                </div>
-                                }&nbsp;
-                                { css && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={css}  title="CSS3" alt="CSS" width="50" height="50"/>
-                                    </div>
-                                    <h2>CSS3</h2>
-                                </div>
-                                }&nbsp;
-                                { tailwindcss && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={tailwindcss} title="Tailwindcss" alt="Tailwindcss" width="50" height="50"/>
-                                    </div>
-                                    <h2>TailwindCSS</h2>
-                                </div>
-                                }&nbsp;
-                                { bootstrap && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={bootstrap} title="Bootstrap" alt="Bootstrap" width="50" height="50"/>
-                                    </div>
-                                    <h2>Bootstrap</h2>
-                                </div>
-                                }&nbsp;
-                                { materialui && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={materialui} title="Material UI" alt="Material UI" width="50" height="50"/>
-                                    </div>
-                                    <h2>MaterialUI</h2>
-                                </div>
-                                }&nbsp; 
-                                { javascript && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={javascript} title="JavaScript" alt="JavaScript" width="40" height="40"/>
-                                    </div>
-                                    <h2>JavaScript</h2>
-                                </div>
-                                }&nbsp;
-                                { typescript && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={typescript} title="TypeScript" alt="TypeScript" width="40" height="40"/>
-                                    </div>
-                                    <h2>TypeScript</h2>
-                                </div>
-                            }&nbsp;
-
-                                { nodejs && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={nodejs} title="NodeJS" alt="NodeJS" width="50" height="50"/>
-                                    </div>
-                                    <h2>NodeJS</h2>
-                                </div>
-                            }&nbsp;
-                                { express && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={express} title="Express" alt="Express" width="50" height="50"/>
-                                    </div>
-                                    <h2>ExpressJS</h2>
-                                </div>
-                            }&nbsp;
-                                { flutter && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={flutter} title="Flutter" alt="Flutter" width="50" height="50"/>
-                                    </div>
-                                    <h2>Flutter</h2>
-                                </div>
-                            }&nbsp;
-                                { firebase && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={firebase} title="Firebase" alt="Firebase" width="50" height="50"/>
-                                    </div>
-                                    <h2>Firebase</h2>
-                                </div>
-                            }&nbsp;
-                            { mongodb && 
-                                <div className="stackIconContainer">
-                                    <div className="stackIcon">
-                                        <img src={mongodb} title="MongoDB" alt="MongoDB" width="50" height="50"/>
-                                    </div>
-                                    <h2>MongoDB</h2>
-                                </div>
-                            }&nbsp;
+                                    if(tech==="NODEJS"){
+                                        return(
+                                            <>   
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={NODEJS} title="NodeJS" alt="NodeJS" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>NodeJS</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="EXPRESSJS"){
+                                        return(
+                                            <>    
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={EXPRESS} title="Express" alt="Express" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>ExpressJS</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="FLUTTER"){
+                                        return(
+                                            <> 
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={FLUTTER} title="Flutter" alt="Flutter" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>Flutter</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="FIREBASE"){
+                                        return(
+                                            <>
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={FIREBASE} title="Firebase" alt="Firebase" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>Firebase</h2>
+                                                </div>&nbsp;
+                                            </>
+                                        )
+                                    }
+                                    if(tech==="MONGODB"){
+                                        return(
+                                            <> 
+                                                <div className="stackIconContainer">
+                                                    <div className="stackIcon">
+                                                        <img src={MONGODB} title="MongoDB" alt="MongoDB" width="50" height="50"/>
+                                                    </div>
+                                                    <h2>MongoDB</h2>
+                                                </div>&nbsp; 
+                                            </>
+                                        )
+                                    }
+                                    })
+                                }
                                 
                             </div>
                         </div>
                     </div> 
 
-                    <div className="">
-                        <img src="" alt="" />
+                    <div className="flex items-center justify-end">
+                        <div className="w-4/5">
+                            <img src={projectDetail?.images[0]} alt="" className="w-full h-full"/>
+                        </div>
                     </div>
-               </div> 
+                </div> 
 
-               <div className="w-full">
+                <div className="w-full mt-20">
                     <h2 className="text-3xl my-4">More Images</h2>
 
-                    <div className="flex flex-wrap w-full [&>*]:w-full [&>*]:sm:w-[20rem] [&>*]:h-full [&>*]:sm:h-[15rem] [&>*]:bg-rose-500 [&>*]:m-4">
-                        <div className="cursor-zoom-in"></div>
-                        <div></div>
-                        <div></div>
-                        {/* <div></div> */}
+                    <div className="flex flex-wrap w-full [&>*]:w-full [&>*]:sm:w-[20rem] [&>*]:h-full [&>*]:sm:h-[12rem] [&>*]:bg-rose-500 [&>*]:m-4">
+                        {
+                            projectDetail?.images.map((image, index)=> {
+                                return(
+                                    <div className="cursor-zoom-in" key={index}>
+                                        <img src={image} alt={`image-${index}`} className="w-full h-full"/>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     )
