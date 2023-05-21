@@ -3,34 +3,44 @@ import ProjectCard from "./ProjectCard";
 import { ProjectType } from "../../../dataTypes";
 import instance from "../../api/axios";
 import { Link } from "react-router-dom";
+import { FadeLoader } from "react-spinners";
 
 
 export default function OverviewProject(){
 
-  const [projects, setProjects] = React.useState<ProjectType[]>([])
-  const miniProjects : ProjectType[] = []
+    const [isLoading, setIsLoading] = React.useState<boolean>(false)
+    
+    const [category, setCategory] = React.useState<string>("All");
 
-  React.useEffect(()=> {
-    const getProject = async ()=>{
-       await instance.get("/projects")
+    React.useEffect(()=> {
+
+        setIsLoading(true)
+        instance.get("/projects",{
+        params: {
+          category
+        }
+        })
         .then((project) => {
             setProjects(project.data.data)
+            setIsLoading(false)
         })
-        .catch((err)=> console.log(err))
-    }
+        .catch((err)=> {
+            console.log(err.message)
+            setIsLoading(false)
+        })
+    },[category])
 
-    getProject();
-  },[])
-
-    
-
+    const [projects, setProjects] = React.useState<ProjectType[]>([])
     console.log("All Projects:",projects);
-    miniProjects[0] = projects[0];
-    miniProjects[1] = projects[1];
-    miniProjects[2] = projects[2];
-    miniProjects[3] = projects[3];
-    miniProjects[4] = projects[4];
-    miniProjects[5] = projects[5];
+    const miniProjects : ProjectType[] = []
+    miniProjects[0] = projects[3];
+    miniProjects[1] = projects[4];
+    miniProjects[2] = projects[5];
+    miniProjects[3] = projects[6];
+    miniProjects[4] = projects[8];
+    miniProjects[5] = projects[9];
+
+    console.log(miniProjects)
 
     return (
         <div className="py-10 sm:py-20 px-4 sm:px-20">
@@ -39,15 +49,25 @@ export default function OverviewProject(){
                     <h2 className="text-4xl mb-2">Latest Works</h2>
                     <p className="text-xs text-tertiary">Perfect Solutions For digital experience</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {
-                        // miniProjects.map((miniProject, index) => {
-                        //     return (<ProjectCard key={index} project={miniProject}/>)
-                        // })
-        
-                    }                    
-
-                </div>
+                {
+                    isLoading? 
+                    <div className="flex justify-center items-center">
+                        <FadeLoader color="#6ff7a7" />
+                    </div>
+                    
+                    :
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        {
+                            projects.length === 0 ?
+                            <div></div>
+                            :
+                            miniProjects.map((miniProject, index) => {
+                                return (<ProjectCard key={index} project={miniProject}/>)
+                            })
+                        }                    
+                    </div>
+                }
+                
                 <div className="mt-10 text-center">
                     <Link to="/projects" className="text-secondary underline cursor-pointer font-semibold text-xl mb-2 hover:no-underline w-fit mx-auto">
                         <h2>ALL PROJECTS</h2>
