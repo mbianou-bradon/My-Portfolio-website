@@ -1,7 +1,7 @@
 import React from "react"
 import { BsTwitter, BsGithub, BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs"
 import { AiOutlineCodepen } from "react-icons/ai"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function Footer(){
 
@@ -11,7 +11,7 @@ export default function Footer(){
                 <div className="col-span-2 text-3xl">
                     <h2 className="w-full sm:w-4/5 mb-6">Let's make something amazing together.</h2>
 
-                    <h2>Start by <span className="cursor-pointer hover:underline text-secondary">Saying Hi</span></h2>
+                    <h2>Start by <Link to={"/contact"} className="cursor-pointer hover:underline text-secondary">Saying Hi</Link></h2>
                 </div>
                 <div>
                     <div>

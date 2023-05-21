@@ -17,7 +17,7 @@ export default function Hero(){
                     </div>
 
                     <div className="text-xl uppercase text-secondary underline cursor-pointer hover:no-underline font-semibold w-fit">
-                        <a href="#">Let's Chat!</a>
+                        <a href="#letsConnect">Let's Chat!</a>
                     </div>
                 </div>
                 <div className="w-full h-full col-start-1 row-start-1 md:col-start-2 flex items-center justify-center">

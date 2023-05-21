@@ -3,7 +3,7 @@
 export default function LetsConnects(){
 
     return (
-        <div className="py-10 sm:py-20 px-4 sm:px-20">
+        <div id="letsConnect" className="py-10 sm:py-20 px-4 sm:px-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                     <div className="w-[80%] py-10">
