@@ -8,18 +8,22 @@ import ProjectCard from '../components/OverviewProject/ProjectCard'
 export default function Projects() {
 
   const [projects, setProjects] = React.useState<ProjectType[]>([])
+  const [category, setCategory] = React.useState<string>("");
 
   React.useEffect(
     ()=>{
-      instance.get("/projects")
+      instance.get("/projects",{
+        params: {
+          category: category
+        }
+      })
       .then((project) => {
         const temp = project.data.data
         setProjects(temp)
       })
-      .catch((err)=> console.log(err))
-    },[])
+      .catch((err)=> console.log("All Project Error:",err.message))
+    },[category]);
 
-    console.log(projects)
 
 
 
@@ -30,8 +34,7 @@ export default function Projects() {
         <div className="flex items-center justify-between flex-wrap gap-y-5">
             <div className="border rounded-full w-fit flex px-2 sm:px-4 py-1 text-sm sm:text-[1rem]">
               <label htmlFor="projectType">Project Type :</label>
-              <select name="projextType" id="" className="focus:outline-0 bg-transparent text-sm [&>*:hover]:bg-primary min-w-0">
-                <option value=""></option>
+              <select name="projextType" id="" onChange={(value)=>setCategory(value.target.value)} className="focus:outline-0 bg-transparent text-sm text-secondary min-w-0">
                 <option value="all">All</option>
                 <option value="frontend">Frontend</option>
                 <option value="backend">Backend</option>
