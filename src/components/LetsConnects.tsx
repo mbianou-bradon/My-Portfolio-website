@@ -1,6 +1,19 @@
-
+import React from "react";
+import emailjs from "@emailjs/browser";
 
 export default function LetsConnects(){
+    const connectForm = React.useRef();
+
+    function sendConnectMessage(event: any){
+        event.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', connectForm.current, 'YOUR_PUBLIC_KEY')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
 
     return (
         <div id="letsConnect" className="py-10 sm:py-20 px-4 sm:px-20">
@@ -16,7 +29,7 @@ export default function LetsConnects(){
 
                 <div>
                     <h4 className="text-tertiary text-xs mb-5">Let's Connect</h4>
-                    <div className="sm:w-4/5">
+                    <form ref={connectForm} onSubmit={sendConnectMessage} className="sm:w-4/5">
                         <div>
                             <input type="text" name="name" id="forName" placeholder="Name" className="inputStyle"/>
                         </div>
@@ -28,7 +41,7 @@ export default function LetsConnects(){
 
                         <button className="border border-secondary bg-secondary/80 py-2 text-white font-semibold rounded-md text-sm my-3 w-full hover:bg-transparent active:scale-[0.98] shadow-inner shadow-secondary">Submit Message</button>
                     
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
