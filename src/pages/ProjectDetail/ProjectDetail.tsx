@@ -1,9 +1,9 @@
 import { BsGithub } from "react-icons/bs";
 import { MdOnlinePrediction } from "react-icons/md"
-import { HTML5, CSS, JAVASCRIPT, TYPESCRIPT, REACT, REDUX, TAILWINDCSS, FIREBASE, FLUTTER, MATERIALUI, BOOTSTRAP, NODEJS, MONGODB, EXPRESS, NEXTJS } from "../assets/icons/iconsfile"
+import { HTML5, CSS, JAVASCRIPT, TYPESCRIPT, REACT, REDUX, TAILWINDCSS, FIREBASE, FLUTTER, MATERIALUI, BOOTSTRAP, NODEJS, MONGODB, EXPRESS, NEXTJS } from "../../assets/icons/iconsfile"
 import React from "react";
-import { ProjectType } from "../../dataTypes";
-import instance from "../api/axios";
+import { ProjectType } from "../../../dataTypes";
+import instance from "../../api/axios";
 import { useParams } from "react-router";
 import { PulseLoader } from "react-spinners";
 

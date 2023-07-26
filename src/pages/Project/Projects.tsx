@@ -1,7 +1,7 @@
 import React from 'react'
-import instance from '../api/axios'
-import { ProjectType } from '../../dataTypes'
-import ProjectCard from '../components/OverviewProject/ProjectCard'
+import instance from '../../api/axios'
+import { ProjectType } from '../../../dataTypes'
+import ProjectCard from '../../components/OverviewProject/ProjectCard'
 import { HashLoader } from 'react-spinners'
 
 

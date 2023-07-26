@@ -1,13 +1,13 @@
 import { Outlet, createBrowserRouter, RouterProvider} from "react-router-dom"
-import Footer from './components/Footer';
-import NavBar from './components/Navbar';
-import Home from './pages/Home';
-import ProjectDetails from './pages/ProjectDetail';
-import Projects from "./pages/Projects";
-import About from "./pages/About";
-import Error from "./pages/Error";
-import Contact from "./pages/Contact";
-import Blogs from "./pages/Blogs";
+import Footer from './components/Footer/Footer';
+import NavBar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import ProjectDetails from './pages/ProjectDetail/ProjectDetail';
+import Projects from "./pages/Project/Projects";
+import About from "./pages/About/About";
+import Error from "./pages/Error/Error";
+import Contact from "./pages/Contact/Contact";
+import Blogs from "./pages/Blogs/Blogs";
 
 
 const MyApp = () => {
