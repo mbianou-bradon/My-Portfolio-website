@@ -41,7 +41,6 @@ export default function Contact(){
                     
                                 <input type="text" name="subject" id="forSubject" className="inputStyle" placeholder="Subject"/>
 
-                    
                                 <textarea name="message" id="forMessage" rows={5} placeholder="Write your message here. . ." className="bg-transparent rounded p-4 my-2 text-sm w-full resize-none border-2 border-tertiary focus:border-secondary focus:outline-none"></textarea>
 
                                 <button className="border border-primary bg-primary py-2 text-white font-semibold rounded-full text-sm my-3 w-full hover:bg-primary hover:scale-105 active:scale-95">Submit Message</button>
