@@ -3,7 +3,7 @@ import { IoMdSearch } from "react-icons/io"
 
 
 
-export default function Members() {
+export default function Blogs() {
   return (
     <div className="px-4 sm:px-8 min-h-screen">
       <header className="mb-5">
