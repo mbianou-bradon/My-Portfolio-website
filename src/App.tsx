@@ -9,7 +9,6 @@ import {
   ProjectDetails,
   Projects,
 } from "./pages";
-import { ToastContainer } from "react-toastify";
 
 const MyApp = () => {
   return (
@@ -19,7 +18,6 @@ const MyApp = () => {
         <Outlet />
       </div>
       <Footer />
-      <ToastContainer />
     </div>
   );
 };
