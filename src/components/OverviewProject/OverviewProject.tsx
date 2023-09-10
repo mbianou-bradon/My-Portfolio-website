@@ -29,16 +29,9 @@ export default function OverviewProject() {
   }, [category]);
 
   const [projects, setProjects] = React.useState<ProjectType[]>([]);
-  // console.log("All Projects:",projects);
-  const miniProjects: ProjectType[] = [];
-  miniProjects[0] = projects[3];
-  miniProjects[1] = projects[4];
-  miniProjects[2] = projects[5];
-  miniProjects[3] = projects[6];
-  miniProjects[4] = projects[8];
-  miniProjects[5] = projects[9];
 
-  console.log(miniProjects);
+  let miniProjects: ProjectType[] = [];
+  miniProjects = projects.slice(3, 9);
 
   return (
     <div className="py-10 sm:py-20 px-4 sm:px-20">
