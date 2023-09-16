@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  /** State Management */
   const contactForm = React.useRef<any>();
+  const [nameValue, setNameValue] = useState<string>("");
+  const [emailValue, setEmailValue] = useState<string>("");
+  const [subjectValue, setSubjectValue] = useState<string>("");
+  const [textAreaMessage, setTextAreaMessage] = useState<string>("");
 
   function sendBusinessEmail(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -50,6 +55,8 @@ export default function Contact() {
                   type="text"
                   name="name"
                   id="forName"
+                  value={nameValue}
+                  onChange={(e) => setNameValue(e.target.value)}
                   placeholder="Name"
                   className="inputStyle"
                   required
@@ -59,6 +66,8 @@ export default function Contact() {
                   type="email"
                   name="email"
                   id="forEmail"
+                  value={emailValue}
+                  onChange={(e) => setEmailValue(e.target.value)}
                   placeholder="Email"
                   className="inputStyle"
                   required
@@ -68,6 +77,8 @@ export default function Contact() {
                   type="text"
                   name="subject"
                   id="forSubject"
+                  value={subjectValue}
+                  onChange={(e) => setSubjectValue(e.target.value)}
                   className="inputStyle"
                   placeholder="Subject"
                   required
@@ -76,6 +87,8 @@ export default function Contact() {
                 <textarea
                   name="message"
                   id="forMessage"
+                  value={textAreaMessage}
+                  onChange={(e) => setTextAreaMessage(e.target.value)}
                   rows={5}
                   placeholder="Write your message here. . ."
                   required
