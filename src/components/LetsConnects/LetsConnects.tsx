@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 export default function LetsConnects() {
+  /** State management */
   const connectForm = React.useRef<any>();
+  const [nameValue, setNameValue] = useState<string>("");
+  const [emailValue, setEmailValue] = useState<string>("");
+  const [textAreaMessage, setTextAreaMessage] = useState<string>("");
 
   function sendConnectMessage(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,6 +23,9 @@ export default function LetsConnects() {
         (result) => {
           event.currentTarget.reset();
           alert("Message sent successfully!");
+          setNameValue("");
+          setEmailValue("");
+          setTextAreaMessage("");
         },
         (error) => {
           console.log(error.text);
@@ -54,6 +61,8 @@ export default function LetsConnects() {
                 type="text"
                 name="name"
                 id="forName"
+                value={nameValue}
+                onChange={(e) => setNameValue(e.target.value)}
                 placeholder="Name"
                 className="inputStyle"
                 required
@@ -64,6 +73,8 @@ export default function LetsConnects() {
                 type="email"
                 name="email"
                 id="forEmail"
+                value={emailValue}
+                onChange={(e) => setEmailValue(e.target.value)}
                 placeholder="Email"
                 className="inputStyle"
                 required
@@ -74,6 +85,8 @@ export default function LetsConnects() {
               name="message"
               id="forMessage"
               rows={5}
+              value={textAreaMessage}
+              onChange={(e) => setTextAreaMessage(e.target.value)}
               placeholder="Write your message here. . ."
               required
               className="bg-transparent rounded p-4 my-2 text-sm w-full resize-none border-2 border-tertiary focus:border-secondary focus:outline-none"
